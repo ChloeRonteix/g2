@@ -25,6 +25,16 @@
 #   make CONFIG=PrintrbotPlus BOARD=g2ref-a
 
 ##########
+# Archi configs:
+
+ifeq ("$(CONFIG)","Archi")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gShield
+    endif
+    SETTINGS_FILE="settings_archi.h"
+endif
+
+##########
 # V9-based configs:
 
 ifeq ("$(CONFIG)","ShapeokoDualY")
