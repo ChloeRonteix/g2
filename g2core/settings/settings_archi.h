@@ -21,8 +21,8 @@
 #define MANUAL_FEEDRATE_OVERRIDE_ENABLE true					// [obsolete]: ex FEED_OVERRIDE_ENABLE
 // #define FEED_OVERRIDE_ENABLE	true							// froe Already in planer.h ex 
 // #define FEED_OVERRIDE_FACTOR				1.0					// fro
-// #define SPINDLE_OVERRIDE_ENABLE			true				// spoe Already in spindle.h
-// #define SPINDLE_OVERRIDE_FACTOR			1.0					// spo
+#define SPINDLE_OVERRIDE_ENABLE			1				// spoe
+#define SPINDLE_OVERRIDE_FACTOR			1.0				// spo
 
 // Gcode startup defaults
 
@@ -166,7 +166,6 @@
 #define SPINDLE_DIR_POLARITY        0                   // spdp 0=clockwise is low, 1=clockwise is high
 #define SPINDLE_PAUSE_ON_HOLD       true				// spph
 #define SPINDLE_SPINUP_DELAY        4.0					// spde
-#define SPINDLE_DWELL_TIME          4.0					// [obsolette]: ex SPINDLE_SPINUP_DELAY
 #define SPINDLE_SPEED_MIN			0					// spsn
 #define SPINDLE_SPEED_MAX			24000				// spsm
 
