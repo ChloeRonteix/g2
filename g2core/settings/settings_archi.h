@@ -47,7 +47,8 @@
 #define M1_MICROSTEPS               8                       // 1mi  1,2,4,8,16,32
 #define M1_POLARITY                 0                       // 1po  0=normal, 1=reversed
 #define M1_POWER_MODE               MOTOR_POWER_MODE        // 1pm  TRUE=low power idle enabled
-#define M1_POWER_LEVEL              1
+#define M1_POWER_LEVEL              1.0
+#define M1_POWER_LEVEL_IDLE         0.3
 
 #define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
 #define M2_STEP_ANGLE               1.8
@@ -55,7 +56,8 @@
 #define M2_MICROSTEPS               8
 #define M2_POLARITY                 1
 #define M2_POWER_MODE               MOTOR_POWER_MODE
-#define M2_POWER_LEVEL              1
+#define M2_POWER_LEVEL              1.0
+#define M2_POWER_LEVEL_IDLE         0.3
 
 #define M3_MOTOR_MAP                AXIS_Z_EXTERNAL
 #define M3_STEP_ANGLE               1.8
@@ -63,7 +65,8 @@
 #define M3_MICROSTEPS               8
 #define M3_POLARITY                 1
 #define M3_POWER_MODE               MOTOR_POWER_MODE
-#define M3_POWER_LEVEL              1
+#define M3_POWER_LEVEL              1.0
+#define M3_POWER_LEVEL_IDLE         0.3
 
 // *** axis settings **********************************************************************************
 
@@ -130,34 +133,42 @@
     INPUT_FUNCTION_PANIC
 */
 // Xmax 
-#define DI1_MODE                    NORMALLY_CLOSED
-#define DI1_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI1_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI1_ENABLED                 IO_ENABLED
+#define DI1_POLARITY                NORMALLY_CLOSED
+#define DI1_ACTION                  INPUT_ACTION_LIMIT
 
 // Xmin
-#define DI2_MODE                    NORMALLY_CLOSED
-#define DI2_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI2_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI2_ENABLED                 IO_ENABLED
+#define DI2_POLARITY                NORMALLY_CLOSED
+#define DI2_ACTION                  INPUT_ACTION_LIMIT
 
 // Ymax
-#define DI3_MODE                    NORMALLY_CLOSED
-#define DI3_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI3_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI3_ENABLED                 IO_ENABLED
+#define DI3_POLARITY                NORMALLY_CLOSED
+#define DI3_ACTION                  INPUT_ACTION_LIMIT
 
 // Ymin
-#define DI4_MODE                    NORMALLY_CLOSED
-#define DI4_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI4_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI4_ENABLED                 IO_ENABLED
+#define DI4_POLARITY                NORMALLY_CLOSED
+#define DI4_ACTION                  INPUT_ACTION_LIMIT
 
 // Zmax
-#define DI5_MODE                    NORMALLY_CLOSED
-#define DI5_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI5_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI5_ENABLED                 IO_ENABLED
+#define DI5_POLARITY                NORMALLY_CLOSED
+#define DI5_ACTION                  INPUT_ACTION_LIMIT
 
 // Zmin
-#define DI6_MODE                    NORMALLY_CLOSED
-#define DI6_ACTION                  INPUT_ACTION_FAST_STOP
-#define DI6_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI6_ENABLED                 IO_ENABLED
+#define DI6_POLARITY                NORMALLY_CLOSED
+#define DI6_ACTION                  INPUT_ACTION_LIMIT
+
+// Desactivate others
+#define DI7_ENABLED                 IO_DISABLED
+#define DI8_ENABLED                 IO_DISABLED
+#define DI9_ENABLED                 IO_DISABLED
+#define DI10_ENABLED                IO_DISABLED
+#define DI11_ENABLED                IO_DISABLED
+#define DI12_ENABLED                IO_DISABLED
 
 // *** Spindle Settings ********************************************************************************
 
