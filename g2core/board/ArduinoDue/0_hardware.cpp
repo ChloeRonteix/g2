@@ -236,7 +236,7 @@ stat_t hw_flash(nvObj_t *nv)
 constexpr cfgSubtableFromStaticArray sys_config_3{};
 const configSubtable * const getSysConfig_3() { return &sys_config_3; }
 
-#else
+#elif HAS_LASER
 
 stat_t set_pulse_duration(nvObj_t *nv)
 {
