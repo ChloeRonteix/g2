@@ -113,11 +113,6 @@ int16_t ain_sample_counter = ain_sample_freq;
 Motate::SysTickEvent ain_tick_event{
     [] {
         if (!--ain_sample_counter) {
-            ai1.startSampling();
-            ai2.startSampling();
-            ai3.startSampling();
-            ai4.startSampling();
-
             #if HAS_PRESSURE
             pressure_sensor.startSampling(); // has a timeout built in to prevent over-calling
             #endif
