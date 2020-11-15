@@ -16,7 +16,7 @@
 #define SOFT_LIMIT_ENABLE           1                       // 0=off, 1=on
 #define HARD_LIMIT_ENABLE           1                       // 0=off, 1=on
 
-#define FEEDHOLD_Z_LIFT             10      				// {zl: mm to lift Z on feedhold
+#define FEEDHOLD_Z_LIFT             -1                      // zl: mm to lift Z on feedhold, or -1 to go to Z-max
 
 #define MANUAL_FEEDRATE_OVERRIDE_ENABLE true					// [obsolete]: ex FEED_OVERRIDE_ENABLE
 // #define FEED_OVERRIDE_ENABLE	true							// froe Already in planer.h ex 
@@ -38,7 +38,7 @@
 
 // *** motor settings ************************************************************************************
 
-#define MOTOR_POWER_MODE            MOTOR_POWERED_IN_CYCLE  // default motor power mode (see cmMotorPowerMode in stepper.h)
+#define MOTOR_POWER_MODE            MOTOR_POWERED_IN_CYCLE  // default motor power mode (see cmMotorPowerMode in stepper.h) to test: MOTOR_POWER_REDUCED_WHEN_IDLE
 #define MOTOR_POWER_TIMEOUT         2.00                    // motor power timeout in seconds
 
 #define M1_MOTOR_MAP                AXIS_X_EXTERNAL         // 1ma
@@ -179,6 +179,7 @@
 #define SPINDLE_SPINUP_DELAY        4.0					// spde
 #define SPINDLE_SPEED_MIN			0					// spsn
 #define SPINDLE_SPEED_MAX			24000				// spsm
+#define SPINDLE_SPEED_CHANGE_PER_MS 12.0
 
 // PWM
 #define P1_PWM_FREQUENCY            1000				// in Hz
