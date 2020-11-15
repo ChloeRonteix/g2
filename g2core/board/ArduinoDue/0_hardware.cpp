@@ -230,13 +230,7 @@ stat_t hw_flash(nvObj_t *nv)
 	return(STAT_OK);
 }
 
-#if HAS_PRESSURE
-// Stub in getSysConfig_3
-// constexpr cfgItem_t sys_config_items_3[] = {};
-constexpr cfgSubtableFromStaticArray sys_config_3{};
-const configSubtable * const getSysConfig_3() { return &sys_config_3; }
-
-#elif HAS_LASER
+#if HAS_LASER
 
 stat_t set_pulse_duration(nvObj_t *nv)
 {
@@ -301,7 +295,15 @@ constexpr cfgItem_t sys_config_items_3[] = {
 constexpr cfgSubtableFromStaticArray sys_config_3{sys_config_items_3};
 const configSubtable * const getSysConfig_3() { return &sys_config_3; }
 
+#else
+
+// Stub in getSysConfig_3
+// constexpr cfgItem_t sys_config_items_3[] = {};
+constexpr cfgSubtableFromStaticArray sys_config_3{};
+const configSubtable * const getSysConfig_3() { return &sys_config_3; }
+
 #endif
+
 
 /***********************************************************************************
  * TEXT MODE SUPPORT
