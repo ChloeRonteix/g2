@@ -57,14 +57,14 @@ StepDirStepper<Motate::kSocket3_StepPinNumber,
                Motate::kSocket3_VrefPinNumber>
     motor_3{M3_STEP_POLARITY, M3_ENABLE_POLARITY};
 
-StepDirStepper<Motate::kSocket4_StepPinNumber,
-               Motate::kSocket4_DirPinNumber,
-               Motate::kSocket4_EnablePinNumber,
-               Motate::kSocket4_Microstep_0PinNumber,
-               Motate::kSocket4_Microstep_1PinNumber,
-               Motate::kSocket4_Microstep_2PinNumber,
-               Motate::kSocket4_VrefPinNumber>
-    motor_4{M4_STEP_POLARITY, M4_ENABLE_POLARITY};
+//StepDirStepper<Motate::kSocket4_StepPinNumber,
+//               Motate::kSocket4_DirPinNumber,
+//               Motate::kSocket4_EnablePinNumber,
+//               Motate::kSocket4_Microstep_0PinNumber,
+//               Motate::kSocket4_Microstep_1PinNumber,
+//               Motate::kSocket4_Microstep_2PinNumber,
+//               Motate::kSocket4_VrefPinNumber>
+//    motor_4{M4_STEP_POLARITY, M4_ENABLE_POLARITY};
 
 // StepDirStepper<
 //    Motate::kSocket5_StepPinNumber,
@@ -92,7 +92,7 @@ extern LaserTool_used_t laser_tool;
 LaserTool_used_t &motor_5 = laser_tool;
 Stepper* const Motors[MOTORS] = {&motor_1, &motor_2, &motor_3, &motor_4, &motor_5};
 #else
-Stepper* const Motors[MOTORS] = {&motor_1, &motor_2, &motor_3, &motor_4};
+Stepper* const Motors[MOTORS] = {&motor_1, &motor_2, &motor_3};
 #endif
 
 
