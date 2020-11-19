@@ -66,7 +66,7 @@
 #define M3_POLARITY                 1
 #define M3_POWER_MODE               MOTOR_POWER_MODE
 #define M3_POWER_LEVEL              1.0
-#define M3_POWER_LEVEL_IDLE         0.3
+#define M3_POWER_LEVEL_IDLE         0.1
 
 // *** axis settings **********************************************************************************
 
