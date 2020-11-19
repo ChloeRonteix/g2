@@ -48,7 +48,7 @@
 #define M1_POLARITY                 0                       // 1po  0=normal, 1=reversed
 #define M1_POWER_MODE               MOTOR_POWER_MODE        // 1pm  TRUE=low power idle enabled
 #define M1_POWER_LEVEL              1.0
-#define M1_POWER_LEVEL_IDLE         0.3
+#define M1_POWER_LEVEL_IDLE         0.1
 
 #define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
 #define M2_STEP_ANGLE               1.8
@@ -57,7 +57,7 @@
 #define M2_POLARITY                 1
 #define M2_POWER_MODE               MOTOR_POWER_MODE
 #define M2_POWER_LEVEL              1.0
-#define M2_POWER_LEVEL_IDLE         0.3
+#define M2_POWER_LEVEL_IDLE         0.1
 
 #define M3_MOTOR_MAP                AXIS_Z_EXTERNAL
 #define M3_STEP_ANGLE               1.8
@@ -171,6 +171,10 @@
 #define DI12_ENABLED                IO_DISABLED
 
 // *** Spindle Settings ********************************************************************************
+
+#define SPINDLE_ENABLE_OUTPUT_NUMBER    12
+#define SPINDLE_DIRECTION_OUTPUT_NUMBER 13
+#define SPINDLE_PWM_NUMBER              11
 
 #define SPINDLE_MODE                1 					// spmo
 #define SPINDLE_ENABLE_POLARITY     1                   // spep  0=active low, 1=active high
