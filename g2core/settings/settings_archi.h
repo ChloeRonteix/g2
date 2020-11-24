@@ -103,7 +103,7 @@
 #define Z_AXIS_MODE                 AXIS_STANDARD
 #define Z_VELOCITY_MAX              2000
 #define Z_FEEDRATE_MAX              1500
-#define Z_TRAVEL_MIN                -95
+#define Z_TRAVEL_MIN                -100
 #define Z_TRAVEL_MAX                0
 #define Z_JERK_MAX                  1000
 #define Z_JERK_HIGH_SPEED           2500
