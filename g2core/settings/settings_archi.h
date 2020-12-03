@@ -11,18 +11,26 @@
 
 //**** GLOBAL / GENERAL SETTINGS ******************************************************
 
+// *** Communications and Reporting Settings *** //
+
+#define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        //  _OFF, _XON or _RTS 
+#define SAFETY_INTERLOCK_ENABLE     0   
+#define PLANNER_QUEUE_SIZE          ((uint8_t)128)          // Suggest 12 min. Limit is 255
+
 // Machine configuration settings
+
+#define JUNCTION_INTEGRATION_TIME   1.2                    // {jt: cornering - between 0.05 and 2.00 (max)
 
 #define SOFT_LIMIT_ENABLE           1                       // 0=off, 1=on
 #define HARD_LIMIT_ENABLE           1                       // 0=off, 1=on
 
 #define FEEDHOLD_Z_LIFT             -1                      // zl: mm to lift Z on feedhold, or -1 to go to Z-max
 
-#define MANUAL_FEEDRATE_OVERRIDE_ENABLE true					// [obsolete]: ex FEED_OVERRIDE_ENABLE
-// #define FEED_OVERRIDE_ENABLE	true							// froe Already in planer.h ex 
-// #define FEED_OVERRIDE_FACTOR				1.0					// fro
-#define SPINDLE_OVERRIDE_ENABLE			1				// spoe
-#define SPINDLE_OVERRIDE_FACTOR			1.0				// spo
+#define MANUAL_FEEDRATE_OVERRIDE_ENABLE true				// [obsolete]: ex FEED_OVERRIDE_ENABLE
+// #define FEED_OVERRIDE_ENABLE	true						// froe Already in planer.h ex 
+// #define FEED_OVERRIDE_FACTOR				1.0				// fro
+#define SPINDLE_OVERRIDE_ENABLE			1				    // spoe
+#define SPINDLE_OVERRIDE_FACTOR			1.0				    // spo
 
 // Gcode startup defaults
 
