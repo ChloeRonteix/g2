@@ -15,7 +15,7 @@
 
 #define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        //  _OFF, _XON or _RTS 
 #define SAFETY_INTERLOCK_ENABLE     0                       // saf
-#define PLANNER_QUEUE_SIZE          ((uint8_t)128)       // Suggest 12 min. Limit is 255
+#define PLANNER_QUEUE_SIZE          (100)                   // Suggest 12 min. Limit is 255 (113 for DUE)
 
 // Machine configuration settings
 
