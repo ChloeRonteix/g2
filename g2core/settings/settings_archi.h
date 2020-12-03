@@ -11,7 +11,15 @@
 
 //**** GLOBAL / GENERAL SETTINGS ******************************************************
 
+// Communications and Reporting Settings
+
+#define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        //  _OFF, _XON or _RTS 
+#define SAFETY_INTERLOCK_ENABLE     0                       // saf
+#define PLANNER_QUEUE_SIZE          ((uint8_t)128)       // Suggest 12 min. Limit is 255
+
 // Machine configuration settings
+
+#define JUNCTION_INTEGRATION_TIME   1.2                    // {jt: cornering - between 0.05 and 2.00 (max)
 
 #define SOFT_LIMIT_ENABLE           1                       // 0=off, 1=on
 #define HARD_LIMIT_ENABLE           1                       // 0=off, 1=on

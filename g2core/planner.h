@@ -226,7 +226,9 @@ typedef enum {                      // code blocks for planning and trapezoid ge
 
 /*** Most of these factors are the result of a lot of tweaking. Change with caution.***/
 
+#ifndef PLANNER_QUEUE_SIZE  
 #define PLANNER_QUEUE_SIZE          ((uint8_t)48)       // Suggest 12 min. Limit is 255
+#endif
 #define SECONDARY_QUEUE_SIZE        ((uint8_t)12)       // Secondary planner queue for feedhold operations
 #define PLANNER_BUFFER_HEADROOM     ((uint8_t)4)        // Buffers to reserve in planner before processing new input line
 #define JERK_MULTIPLIER             ((float)1000000)    // DO NOT CHANGE - must always be 1 million
